@@ -3,9 +3,14 @@ It's a platform to connect Sponsors and Influencers so that sponsors can get the
 
 ## Frameworks to be used
 These are the mandatory frameworks on which the project has to be built.
- - Flask for application code
- - Jinja2 templates + Bootstrap for HTML generation and styling
- - SQLite for data storage
+- SQLite for data storage
+- Flask for API
+- VueJS for UI
+- Jinja2
+- Bootstrap for HTML generation and styling (No other CSS framework is allowed)
+- SQLite for database
+- Redis for caching
+- Redis and Celery for batch jobs
 
 # Project Setup
 
