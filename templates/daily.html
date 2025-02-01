@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Reminder</title>
+</head>
+<body>
+    <h3>Hi {{ user }},</h3>
+    <p>Your profile status: <strong>{{ data.profile_status }}</strong></p>
+    <p>You have:</p>
+    <ul>
+        <li><strong>{{ data.pending_requests }}</strong> pending ad request(s).</li>
+        <li><strong>{{ data.flagged_incoming }}</strong> flagged incoming ad request(s).</li>
+        <li><strong>{{ data.flagged_outgoing }}</strong> flagged outgoing ad request(s).</li>
+    </ul>
+    <p>Visit the <a href="{{ data.visit_url }}">dashboard</a> to take action and explore new opportunities.</p>
+    <p>Best regards,<br>Your Platform Team</p>
+</body>
+</html>

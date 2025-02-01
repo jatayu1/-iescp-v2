@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Activity Report</title>
+</head>
+<body>
+    <h3>Hi {{ user }},</h3>
+    <p>Here’s your activity report for last month:</p>
+    <h4>Summary:</h4>
+    <ul>
+        <li>Total campaigns (last month): {{ data.total_campaigns }}</li>
+        <li>Campaigns ended last month: {{ data.ended_campaigns_last_month }}</li>
+        <li>Total budget spent last month: ${{ data.budget_spent_last_month }}</li>
+    </ul>
+    <h4>Campaign Details (Active or Ended):</h4>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Budget</th>
+                <th>Status</th>
+                <th>Flagged</th>
+                <th>Assigned To</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for campaign in data.campaign_details %}
+            <tr>
+                <td>{{ campaign.campaign_name }}</td>
+                <td>{{ campaign.campaign_description }}</td>
+                <td>{{ campaign.campaign_start_date }}</td>
+                <td>{{ campaign.campaign_end_date }}</td>
+                <td>${{ campaign.campaign_budget }}</td>
+                <td>{{ campaign.campaign_status }}</td>
+                <td>{{ campaign.campaign_flagged }}</td>
+                <td>{{ campaign.campaign_assigned_to }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Thank you for using our platform. For more details, please check the attached report.</p>
+    <p>Best regards,<br>IESCPE</p>
+</body>
+</html>
